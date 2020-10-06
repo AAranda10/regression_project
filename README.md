@@ -53,11 +53,11 @@ Questions:
 
 
 ### Hypothesese:
-- $H:0$: Property square footage is not related to tax valuation
-- $H:a$: Property square footage is related to tax valuation
+- H0: Property square footage is not related to tax valuation
+- Ha: Property square footage is related to tax valuation
 
-- $H_0$: The number of bedrooms is not related to tax valuation
-- $H_a$: The number of bedrooms is related to tax valuation
+- H0: The number of bedrooms is not related to tax valuation
+- Ha: The number of bedrooms is related to tax valuation
 
 
 ## Data Dictionary
