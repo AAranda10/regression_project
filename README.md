@@ -58,9 +58,9 @@ Questions:
 
 - Ha: Property square footage is related to tax valuation
 
-- H0: Churn customers are independent of fiber customers
+- H0: Number of bedrooms are independent of tax valuation
 
-- Ha: Churn customers are not independent of fiber customers
+- Ha: Number of bedrooms are not independent of tax valuation
 
 
 ## Data Dictionary
