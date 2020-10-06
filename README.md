@@ -39,6 +39,19 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
     └── presentation        <- A copy of your presentation
 ```
 
+## Project Planning
+
+Questions:
+- Does number of bedrooms matter to the tax value?
+- Does location within the state or county affect tax valuation?
+- Is total square footage independent of tax valuation?
+
+
+### Hypothesese:
+- $H_0$: Property square footage is not related to tax valuation
+- $H_a$: Property square footage is related to tax valuation
+
+
 ## Data Dictionary
 
 | Feature | Definition |
