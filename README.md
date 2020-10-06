@@ -53,11 +53,14 @@ Questions:
 
 
 ### Hypothesese:
+
 - H0: Property square footage is not related to tax valuation
+
 - Ha: Property square footage is related to tax valuation
 
-- H0: The number of bedrooms is not related to tax valuation
-- Ha: The number of bedrooms is related to tax valuation
+- H0: Churn customers are independent of fiber customers
+
+- Ha: Churn customers are not independent of fiber customers
 
 
 ## Data Dictionary
