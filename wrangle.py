@@ -49,13 +49,13 @@ def train_validate_test(df):
 
         
     # split train into X (dataframe, drop target) & y (series, keep target only)
-    X_train = train.drop(columns= ['transactiondate', 'landtaxvaluedollarcnt', 'propertycountylandusecode'])
-    X_validate = validate.drop(columns= ['transactiondate', 'landtaxvaluedollarcnt', 'propertycountylandusecode'])
-    X_test = test.drop(columns= ['transactiondate', 'landtaxvaluedollarcnt', 'propertycountylandusecode'])
+    X_train = train.drop(columns= ['transactiondate', 'taxvaluedollarcnt', 'propertycountylandusecode'])
+    X_validate = validate.drop(columns= ['transactiondate', 'taxvaluedollarcnt', 'propertycountylandusecode'])
+    X_test = test.drop(columns= ['transactiondate', 'taxvaluedollarcnt', 'propertycountylandusecode'])
 
-    y_train = train[['landtaxvaluedollarcnt']]
-    y_validate = validate[['landtaxvaluedollarcnt']]
-    y_test = test[['landtaxvaluedollarcnt']]
+    y_train = train[['taxvaluedollarcnt']]
+    y_validate = validate[['taxvaluedollarcnt']]
+    y_test = test[['taxvaluedollarcnt']]
     return X_train, y_train, X_validate, y_validate, X_test, y_test
 
 
