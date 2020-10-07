@@ -55,7 +55,7 @@ Initial Questions:
 
 ### Hypotheses:
 
-- H0: Property square footage is not related to peropery value
+- H0: Property square footage is not related to property value
 
 - Ha: Property square footage is related to property value
 
