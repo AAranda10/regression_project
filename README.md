@@ -1,12 +1,14 @@
 # Zillow Regression Project
 
-### Author: Austin Aranda and Luke Becker
+### Authors: Austin Aranda, Luke Becker
 
 ## Description: 
-The purpose of this project is, using the Zillow dataset, develop a model that is able to predict property tax values. In addition, we plan on creating a report laying out:
-    1. Where the properties are located (by state and county)
-    2. distribution of tax rates for each county
-    3. 
+The purpose of this project is to develop a model that is able to predict property values in Los Angeles, California, using the Zillow dataset. We intend to discover the key features that most accurately predict property value. 
+
+In addition, we plan on these deliverables:
+    1. Map showing variations in tax rates by county.
+    2. Acquire.py, Prep.py, Wrangle.py, and Model.py files to be able to recreate our efforts.
+    3. Presentation with the results of our findings.
 
 ## Project Organization
 
@@ -44,32 +46,34 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 
 ## Project Planning
 
-Questions:
-- Does number of bedrooms matter to the tax valuation?
-- Does location within the state or county affect tax valuation?
-- Is total square footage independent of tax valuation?
+Initial Questions:
+- Does number of bedrooms matter to the property value?
+- Does location within the state or county affect overal property value?
+- Is total square footage independent of property value?
 - Does a combined bedroom/bathroom square footage feature have better correlation with the target variable than the separate features?
-- Does lot size have a better correlation with tax valuation than house square footage?
 
 
-### Hypothesese:
+### Hypotheses:
 
-- H0: Property square footage is not related to tax valuation
+- H0: Property square footage is not related to property value
 
-- Ha: Property square footage is related to tax valuation
+- Ha: Property square footage is related to property value
 
-- H0: Number of bedrooms are independent of tax valuation
+- H0: Number of bedrooms are independent of property value
 
-- Ha: Number of bedrooms are not independent of tax valuation
+- Ha: Number of bedrooms are not independent of property value
 
 
 ## Data Dictionary
 
 | Feature | Definition |
 | --- | --- |
-| Feature 1 | Definition 1 |
-| Feature 2 | Definition 2 |
+| bathroomcnt | Number of bathrooms in property (includes half bathrooms) |
+| bedroomcnt | Number of bedrooms in property |
+| calculatedbathnbr | Number of both bedrooms and bathrooms in property |
+| calculatedfinishedsquarefeet | Total Square Footage of the property |
+| fullbathcnt | Number of full bathrooms in property (excludes half bathrooms) |
 
 | Target | Definition |
 | --- | --- |
-| Target 1 | Definition 1 |
+| taxvaluedollarcnt | Value of the property |
