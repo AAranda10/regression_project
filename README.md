@@ -68,9 +68,12 @@ Initial Questions:
 
 | Feature | Definition |
 | --- | --- |
-| Feature 1 | Definition 1 |
-| Feature 2 | Definition 2 |
+| bathroomcnt | Number of bathrooms in dwelling (includes half bathrooms) |
+| bedroomcnt | Number of bedrooms in dwelling |
+| calculatedbathnbr | Number of both bedrooms and bathrooms in dwelling |
+| calculatedfinishedsquarefeet | Total Square Footage of the dwelling |
+| fullbathcnt | Number of full bathrooms in dwelling (excludes half bathrooms) |
 
 | Target | Definition |
 | --- | --- |
-| Target 1 | Definition 1 |
+| taxvaluedollarcnt | Value of the home |
