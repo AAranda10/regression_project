@@ -8,8 +8,6 @@ import numpy as np
 
 from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
 
-import os
-
 # Turn off warnings
 import warnings
 warnings.filterwarnings("ignore")
@@ -49,9 +47,9 @@ def train_validate_test(df):
 
         
     # split train into X (dataframe, drop target) & y (series, keep target only)
-    X_train = train.drop(columns= ['transactiondate', 'taxvaluedollarcnt', 'propertycountylandusecode', 'taxamount'])
-    X_validate = validate.drop(columns= ['transactiondate', 'taxvaluedollarcnt', 'propertycountylandusecode', 'taxamount'])
-    X_test = test.drop(columns= ['transactiondate', 'taxvaluedollarcnt', 'propertycountylandusecode', 'taxamount'])
+    X_train = train.drop(columns= ['taxvaluedollarcnt', 'taxamount', 'logerror'])
+    X_validate = validate.drop(columns= ['taxvaluedollarcnt', 'taxamount', 'logerror'])
+    X_test = test.drop(columns= ['taxvaluedollarcnt', 'taxamount', 'logerror'])
 
     y_train = train[['taxvaluedollarcnt']]
     y_validate = validate[['taxvaluedollarcnt']]

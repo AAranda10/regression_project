@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import acquire
+from scipy import stats
 
 
 # In[2]:
@@ -23,7 +24,9 @@ def prep_zillow_data():
                             'pooltypeid10', 'pooltypeid2', 'pooltypeid7', 'storytypeid', 'threequarterbathnbr',
                             'typeconstructiontypeid', 'yardbuildingsqft17', 'yardbuildingsqft26', 'numberofstories',
                             'fireplaceflag', 'taxdelinquencyflag', 'buildingqualitytypeid', 'garagecarcnt',
-                            'garagetotalsqft', 'poolcnt', 'regionidneighborhood', 'propertyzoningdesc' })
+                            'garagetotalsqft', 'poolcnt', 'regionidneighborhood', 'propertyzoningdesc',
+                            'propertycountylandusecode', 'id', 'parcelid', 'transactiondate' })
+    df['propertylandusetypeid'] = df['propertylandusetypeid'].astype(float)
     df['calculatedfinishedsquarefeet'] = df['calculatedfinishedsquarefeet'].fillna((df['calculatedfinishedsquarefeet'].mean()))
     df['calculatedbathnbr'] = df['calculatedbathnbr'].fillna((df['calculatedbathnbr'].mean()))
     df['finishedsquarefeet12'] = df['finishedsquarefeet12'].fillna((df['finishedsquarefeet12'].mean()))
@@ -37,6 +40,7 @@ def prep_zillow_data():
     df['taxamount'] = df['taxamount'].fillna((df['taxamount'].mean()))
     df['censustractandblock'] = df['censustractandblock'].fillna((df['censustractandblock'].mean()))
     df['yearbuilt'] = df['yearbuilt'].fillna((df['yearbuilt'].mean()))
+    df[(np.abs(stats.zscore(df)) < 3).all(axis=1)]
     return df
 
 
