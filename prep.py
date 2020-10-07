@@ -25,22 +25,19 @@ def prep_zillow_data():
                             'typeconstructiontypeid', 'yardbuildingsqft17', 'yardbuildingsqft26', 'numberofstories',
                             'fireplaceflag', 'taxdelinquencyflag', 'buildingqualitytypeid', 'garagecarcnt',
                             'garagetotalsqft', 'poolcnt', 'regionidneighborhood', 'propertyzoningdesc',
-                            'propertycountylandusecode', 'id', 'parcelid', 'transactiondate' })
+                            'propertycountylandusecode', 'id', 'parcelid', 'transactiondate', 'finishedsquarefeet12', 'latitude',
+                            'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
+                            'landtaxvaluedollarcnt', 'taxamount', 'censustractandblock', 'logerror'})
     df['propertylandusetypeid'] = df['propertylandusetypeid'].astype(float)
     df['calculatedfinishedsquarefeet'] = df['calculatedfinishedsquarefeet'].fillna((df['calculatedfinishedsquarefeet'].mean()))
     df['calculatedbathnbr'] = df['calculatedbathnbr'].fillna((df['calculatedbathnbr'].mean()))
-    df['finishedsquarefeet12'] = df['finishedsquarefeet12'].fillna((df['finishedsquarefeet12'].mean()))
     df['fullbathcnt'] = df['fullbathcnt'].fillna((df['fullbathcnt'].mean()))
     df['heatingorsystemtypeid'] = df['heatingorsystemtypeid'].fillna((df['heatingorsystemtypeid'].mean()))
     df['lotsizesquarefeet'] = df['lotsizesquarefeet'].fillna((df['lotsizesquarefeet'].mean()))
     df['regionidcity'] = df['regionidcity'].fillna((df['regionidcity'].mean()))
     df['regionidzip'] = df['regionidzip'].fillna((df['regionidzip'].mean()))
     df['unitcnt'] = df['unitcnt'].fillna((df['unitcnt'].mean()))
-    df['structuretaxvaluedollarcnt'] = df['structuretaxvaluedollarcnt'].fillna((df['structuretaxvaluedollarcnt'].mean()))
-    df['taxamount'] = df['taxamount'].fillna((df['taxamount'].mean()))
-    df['censustractandblock'] = df['censustractandblock'].fillna((df['censustractandblock'].mean()))
     df['yearbuilt'] = df['yearbuilt'].fillna((df['yearbuilt'].mean()))
-    df[(np.abs(stats.zscore(df)) < 3).all(axis=1)]
     return df
 
 
