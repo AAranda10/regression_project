@@ -25,9 +25,8 @@ def prep_zillow_data():
                             'typeconstructiontypeid', 'yardbuildingsqft17', 'yardbuildingsqft26', 'numberofstories',
                             'fireplaceflag', 'taxdelinquencyflag', 'buildingqualitytypeid', 'garagecarcnt',
                             'garagetotalsqft', 'poolcnt', 'regionidneighborhood', 'propertyzoningdesc',
-                            'propertycountylandusecode', 'id', 'parcelid', 'transactiondate', 'finishedsquarefeet12', 'latitude',
-                            'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
-                            'landtaxvaluedollarcnt', 'taxamount', 'censustractandblock', 'logerror'})
+                            'propertycountylandusecode', 'id', 'parcelid', 'transactiondate', 'finishedsquarefeet12',
+                            'censustractandblock', 'logerror'})
     df['propertylandusetypeid'] = df['propertylandusetypeid'].astype(float)
     df['calculatedfinishedsquarefeet'] = df['calculatedfinishedsquarefeet'].fillna((df['calculatedfinishedsquarefeet'].mean()))
     df['calculatedbathnbr'] = df['calculatedbathnbr'].fillna((df['calculatedbathnbr'].mean()))
@@ -38,6 +37,8 @@ def prep_zillow_data():
     df['regionidzip'] = df['regionidzip'].fillna((df['regionidzip'].mean()))
     df['unitcnt'] = df['unitcnt'].fillna((df['unitcnt'].mean()))
     df['yearbuilt'] = df['yearbuilt'].fillna((df['yearbuilt'].mean()))
+    #df = df[(np.abs(stats.zscore(df)) < 3).all(axis=1)]
+    
     return df
 
 

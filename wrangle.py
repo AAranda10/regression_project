@@ -47,9 +47,21 @@ def train_validate_test(df):
 
         
     # split train into X (dataframe, drop target) & y (series, keep target only)
-    X_train = train.drop(columns= ['taxvaluedollarcnt'])
-    X_validate = validate.drop(columns= ['taxvaluedollarcnt'])
-    X_test = test.drop(columns= ['taxvaluedollarcnt'])
+    X_train = train.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'fips', 'heatingorsystemtypeid', 
+                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'regionidzip', 
+                                   'roomcnt', 'unitcnt', 'yearbuilt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
+                                   'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
+                                   'landtaxvaluedollarcnt', 'taxamount'])
+    X_validate = validate.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'fips', 'heatingorsystemtypeid', 
+                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'regionidzip', 
+                                   'roomcnt', 'unitcnt', 'yearbuilt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
+                                   'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
+                                   'landtaxvaluedollarcnt', 'taxamount'])
+    X_test = test.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'fips', 'heatingorsystemtypeid', 
+                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'regionidzip', 
+                                   'roomcnt', 'unitcnt', 'yearbuilt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
+                                   'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
+                                   'landtaxvaluedollarcnt', 'taxamount'])
 
     y_train = train[['taxvaluedollarcnt']]
     y_validate = validate[['taxvaluedollarcnt']]
