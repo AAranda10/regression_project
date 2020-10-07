@@ -37,8 +37,8 @@ def prep_zillow_data():
     df['regionidzip'] = df['regionidzip'].fillna((df['regionidzip'].mean()))
     df['unitcnt'] = df['unitcnt'].fillna((df['unitcnt'].mean()))
     df['yearbuilt'] = df['yearbuilt'].fillna((df['yearbuilt'].mean()))
-    #df = df[(np.abs(stats.zscore(df)) < 3).all(axis=1)]
-    
+    df['calculatedfinishedsquarefeet'] = df.calculatedfinishedsquarefeet[(np.abs(stats.zscore(df.calculatedfinishedsquarefeet)) < 3)]
+    df = df.dropna()
     return df
 
 
