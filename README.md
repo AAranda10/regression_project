@@ -47,33 +47,33 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 ## Project Planning
 
 Initial Questions:
-- Does number of bedrooms matter to the home value?
-- Does location within the state or county affect overal home value?
-- Is total square footage independent of home value?
+- Does number of bedrooms matter to the property value?
+- Does location within the state or county affect overal property value?
+- Is total square footage independent of property value?
 - Does a combined bedroom/bathroom square footage feature have better correlation with the target variable than the separate features?
 
 
-### Hypothesese:
+### Hypotheses:
 
-- H0: Property square footage is not related to home value
+- H0: Property square footage is not related to peropery value
 
-- Ha: Property square footage is related to home value
+- Ha: Property square footage is related to property value
 
-- H0: Number of bedrooms are independent of home value
+- H0: Number of bedrooms are independent of property value
 
-- Ha: Number of bedrooms are not independent of home value
+- Ha: Number of bedrooms are not independent of property value
 
 
 ## Data Dictionary
 
 | Feature | Definition |
 | --- | --- |
-| bathroomcnt | Number of bathrooms in dwelling (includes half bathrooms) |
-| bedroomcnt | Number of bedrooms in dwelling |
-| calculatedbathnbr | Number of both bedrooms and bathrooms in dwelling |
-| calculatedfinishedsquarefeet | Total Square Footage of the dwelling |
-| fullbathcnt | Number of full bathrooms in dwelling (excludes half bathrooms) |
+| bathroomcnt | Number of bathrooms in property (includes half bathrooms) |
+| bedroomcnt | Number of bedrooms in property |
+| calculatedbathnbr | Number of both bedrooms and bathrooms in property |
+| calculatedfinishedsquarefeet | Total Square Footage of the property |
+| fullbathcnt | Number of full bathrooms in property (excludes half bathrooms) |
 
 | Target | Definition |
 | --- | --- |
-| taxvaluedollarcnt | Value of the home |
+| taxvaluedollarcnt | Value of the property |
