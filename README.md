@@ -5,7 +5,7 @@
 ## Description: 
 The purpose of this project is to develop a model that is able to predict property values in Los Angeles, California, using the Zillow dataset. We intend to discover the key features that most accurately predict property value. 
 
-In addition, we plan on these deliverables:
+In addition, we have provided these deliverables:
     1. Map showing variations in tax rates by county.
     2. Acquire.py, Prep.py, Wrangle.py, and Model.py files to be able to recreate our efforts.
     3. Presentation with the results of our findings.
