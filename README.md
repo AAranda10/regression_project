@@ -77,3 +77,19 @@ Initial Questions:
 | Target | Definition |
 | --- | --- |
 | taxvaluedollarcnt | Value of the property |
+
+
+## Key Findings
+
+- We found that removing outliers for actual home values column had overfit the model.
+
+- The model performed very well on the majority of the population home values.
+
+- Based on our heat map of the local Los Angeles counties, LA county is paying the most in taxes compared to its neighbors
+
+
+## Takeaways
+
+- In order to improve on our model, we would need more listings of the homes that were in the outlier range to adjust for higher valued homes.
+
+- The model did perform better than the baseline significantly, but there is room for improvement with more data.
