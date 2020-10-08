@@ -13,7 +13,9 @@ from scipy import stats
 
 
 # In[2]:
-
+'''
+    This function is going to take in the acquired data and clean it. Removing null values, outliers, and columns we will not need to assess the data or build our models. 
+    '''
 
 def prep_zillow_data():
     df = acquire.get_zillow_data()
