@@ -55,13 +55,13 @@ Initial Questions:
 
 ### Hypotheses:
 
-- H0: There is no change in property value if a bedroom has more than 2 bedrooms
+- H0: Properties with 2 or more bedrooms do not have higher value than average property
 
-- Ha: There is no change in property value if a bedroom has more than 2 bedrooms
+- Ha: Properties with 2 or more bedrooms do have higher value than average property
 
-- H0: Total square feet is independent of property value
+- H0: Properties with 2 or more bedrooms do not have more square footage than average property
 
-- Ha: Total square feet is not independent of property value
+- Ha: Properties with 2 or more bedrooms do not have more square footage than average property
 
 
 ## Data Dictionary
