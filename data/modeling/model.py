@@ -25,7 +25,10 @@ from sklearn.preprocessing import PolynomialFeatures
 
 
 # In[41]:
-
+'''
+    This function can be used to run any train, validate, or test dataframs with a target variable
+    and return the predictions of that dataframe
+    '''
 
 def poly_model(xdf, ydf, y):
     lm = LinearRegression()
@@ -41,7 +44,9 @@ def poly_model(xdf, ydf, y):
 
 
 # In[46]:
-
+'''
+    This function will return the results of our findings and provide them to be a callable function with only the results 
+    '''
 
 def mvp():
     df = prep.prep_zillow_data()
