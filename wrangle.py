@@ -47,21 +47,21 @@ def train_validate_test(df):
 
         
     # split train into X (dataframe, drop target) & y (series, keep target only)
-    X_train = train.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'fips', 'heatingorsystemtypeid', 
-                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'regionidzip', 
-                                   'roomcnt', 'unitcnt', 'yearbuilt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
+    X_train = train.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'heatingorsystemtypeid', 'fullbathcnt',
+                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 
+                                   'roomcnt', 'unitcnt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
                                    'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
-                                   'landtaxvaluedollarcnt', 'taxamount'])
-    X_validate = validate.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'fips', 'heatingorsystemtypeid', 
-                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'regionidzip', 
-                                   'roomcnt', 'unitcnt', 'yearbuilt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
+                                   'landtaxvaluedollarcnt', 'taxamount', 'calculatedbathnbr'])
+    X_validate = validate.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'heatingorsystemtypeid', 'fullbathcnt', 
+                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 
+                                   'roomcnt', 'unitcnt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
                                    'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
-                                   'landtaxvaluedollarcnt', 'taxamount'])
-    X_test = test.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'fips', 'heatingorsystemtypeid', 
-                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'regionidzip', 
-                                   'roomcnt', 'unitcnt', 'yearbuilt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
+                                   'landtaxvaluedollarcnt', 'taxamount', 'calculatedbathnbr'])
+    X_test = test.drop(columns= ['taxvaluedollarcnt', 'assessmentyear', 'roomcnt', 'heatingorsystemtypeid', 
+                                   'lotsizesquarefeet', 'propertylandusetypeid', 'regionidcity', 'regionidcounty', 'fullbathcnt', 
+                                   'roomcnt', 'unitcnt', 'assessmentyear', 'propertylandusetypeid', 'latitude',
                                    'longitude', 'rawcensustractandblock', 'structuretaxvaluedollarcnt',
-                                   'landtaxvaluedollarcnt', 'taxamount'])
+                                   'landtaxvaluedollarcnt', 'taxamount', 'calculatedbathnbr'])
 
     y_train = train[['taxvaluedollarcnt']]
     y_validate = validate[['taxvaluedollarcnt']]
