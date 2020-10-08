@@ -40,6 +40,10 @@ def prep_zillow_data():
     df['unitcnt'] = df['unitcnt'].fillna((df['unitcnt'].mean()))
     df['yearbuilt'] = df['yearbuilt'].fillna((df['yearbuilt'].mean()))
     df['calculatedfinishedsquarefeet'] = df.calculatedfinishedsquarefeet[(np.abs(stats.zscore(df.calculatedfinishedsquarefeet)) < 3)]
+    df['bedroomcnt'] = df.bedroomcnt[(np.abs(stats.zscore(df.bedroomcnt)) < 3)]
+    df['bathroomcnt'] = df.bathroomcnt[(np.abs(stats.zscore(df.bathroomcnt)) < 3)]
+    df['calculatedbathnbr'] = df.calculatedbathnbr[(np.abs(stats.zscore(df.calculatedbathnbr)) < 3)]
+    df['fullbathcnt'] = df.fullbathcnt[(np.abs(stats.zscore(df.fullbathcnt)) < 3)]
     df = df.dropna()
     return df
 
