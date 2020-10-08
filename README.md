@@ -55,13 +55,13 @@ Initial Questions:
 
 ### Hypotheses:
 
-- H0: Property square footage is not related to property value
+- H0: There is no change in property value if a bedroom has more than 2 bedrooms
 
-- Ha: Property square footage is related to property value
+- Ha: There is no change in property value if a bedroom has more than 2 bedrooms
 
-- H0: Number of bedrooms are independent of property value
+- H0: Total square feet is independent of property value
 
-- Ha: Number of bedrooms are not independent of property value
+- Ha: Total square feet is not independent of property value
 
 
 ## Data Dictionary
